@@ -257,10 +257,10 @@ function kirimWA() {
   if(jmlEsAlpukat > 0) { teksEs += '• Es Alpukat x' + jmlEsAlpukat + ' = Rp ' + (jmlEsAlpukat*10000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsAlpukat*10000; }
 
   // GABUNGKAN PESAN
-  var teks = 'Halo Pizza Malakue, saya mau pesan:\n';
-  if(teksPizza!= '') teks += '\n' + teksPizza;
+var teks = '*Halo Pizza Malakue, saya mau pesan:*\n';
+if(teksPizza!= '') teks += '\n' + teksPizza;
 
-  if(teksEs!= '') teks += '\nHalo ES Malakue, saya mau pesan:\n' + teksEs;
+if(teksEs!= '') teks += '\n*Halo ES Malakue, saya mau pesan:*\n' + teksEs;
 
   teks += '\n*Total Bayar: Rp ' + subtotal.toLocaleString('id-ID') + '*';
 
