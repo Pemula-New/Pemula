@@ -3,358 +3,169 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Pizza Enak di Wonomulyo Polewali Mandar | Pizza Malakue</title>
-
-<meta name="title" content="Pizza Enak di Wonomulyo Polewali Mandar">
-<meta name="description" content="Pesan Pizza Home Made enak, Fresh, Murah dan Cepat Saji cuma 23rb-90rb di Wonomulyo Polewali Mandar. Buka Tiap Hari Jam 10.00 - 21.00 WITA. Order via WhatsApp!">
-<meta name="keywords" content="pizza wonomulyo, pizza polewali mandar, pizza murah polman, pizza home made wonomulyo, es pop ice wonomulyo">
-<meta name="robots" content="index, follow">
-
-<link rel="icon" href="logo-pizza.png">
-<meta property="og:title" content="Pizza Malakue - Pizza Home Made Fresh From The Oven">
-<meta property="og:description" content="Pesan Pizza + Es Pop Ice 5 Varian. Fresh, Murah cuma 23rb-90rb. Buka 10.00 - 21.00 WITA. Order via WhatsApp!">
-<meta property="og:keywords" content="pizza home made, pizza murah wonomulyo,pizza murah polewali mandar, es pop ice">
-<meta name="theme-color" content="#8B0000">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pizza-malakue.vercel.app/?v=3">
-<meta property="og:title" content="Pizza Enak di Wonomulyo Polewali Mandar | Pizza Malakue">
-<meta property="og:description" content="Pesan Pizza + Es Pop Ice. Fresh, Murah cuma 23rb-90rb. Buka 10.00 - 21.00 WITA. Order via WhatsApp!">
-<meta property="og:image" content="https://pizza-malakue.vercel.app/?v=3">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="id_ID">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pizza Enak di Wonomulyo Polewali Mandar | Pizza Malakue">
-<meta name="twitter:description" content="Pesan Pizza + Es Pop Ice. Fresh, Murah cuma 23rb-90rb. Buka 10.00 - 21.00 WITA. Order via WhatsApp!">
-<meta name="twitter:image" content="https://pizza-malakue.vercel.app/?v=3">
-  
-  <style>
+<style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background:
-    linear-gradient(180deg, rgba(255,243,235,0.85) 0%, rgba(255,239,217,0.85) 70%, rgba(245,247,255,0.85) 100%),
-    url('logo-pizza.png') no-repeat center 35% fixed;
-  background-size: 350px auto;
-  color: #3D2B1F;
-  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(255,243,235,0.85) 0%, rgba(255,239,217,0.85) 70%, rgba(245,247,255,0.85) 100%), url('logo-pizza.png') no-repeat center 35% fixed;
+  background-size: 350px auto; color: #3D2B1F; min-height: 100vh;
 }
-    .container { max-width: 480px; margin: 0 auto; padding: 16px; position: relative; padding-bottom: 100px; /* biar gak ketutup tombol */}
-    .back-btn, a.back-btn, header a:first-child {
-  position: absolute;
-  top: 20px;
-  left: -20px;
-  font-size: 16px;
-  color: #d2691e;
-  text-decoration: none;
-  font-weight: 600;
-  z-index: 10;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-header {
-  padding-top:70px;
-  text-align: center;
-  background: transparent !important;
-}
-    .btn-primary {
-      width: 100%;
-      background: linear-gradient(135deg, #8B0000 0%, #B22222 100%);
-      color: white;
-      padding: 16px;
-      border: none;
-      border-radius: 12px;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3);
-      transition: transform 0.2s;
-    }
-    .btn-primary:active { transform: scale(0.98); }
-    
-    .btn-secondary {
-      background: #D4AF37;
-      color: #3D2B1F;
-      padding: 12px;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    
-    .card {
-      background: white;
-      border-radius: 14px;
-      padding: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-    
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    
-    .menu-img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 8px;
-    }
-    
-    .price {
-      color: #8B0000;
-      font-size: 18px;
-      font-weight: bold;
-      margin: 6px 0;
-    }
-    
-    .qty-btn {
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .qty-minus { background: #FFE4D6; color: #8B0000; }
-    .qty-plus { background: #8B0000; color: white; }
-    
-    .tiktok-btn {
-      background: #000;
-      color: white;
-      padding: 16px;
-      border-radius: 12px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    
-    .popup {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.7);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 16px;
-      z-index: 50;
-    }
-    
-    .popup-content {
-      background: white;
-      border-radius: 16px;
-      padding: 24px;
-      max-width: 360px;
-      width: 100%;
-      text-align: center;
-    }
-    
-    h1, h2, h3 { color: #8B0000; }
-    .text-brown { color: #5D4037; }
-    .section-title { margin: 20px 0 10px; font-size: 20px; text-align: center; border-bottom: 2px solid #D4AF37; padding-bottom: 5px;}
-
-    /* INI BIAR TOMBOL NEMPEL DI BAWAH */
-    .footer-order {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: white;
-      padding: 12px 16px;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
-      z-index: 99;
-    }
-.fb-btn {
-  background: #1877F2;
-  color: white;
-  padding: 16px;
-  border-radius: 12px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-weight: bold;
-  font-size: 16px;
-}
-.popup-overlay {
-  position: fixed; top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
-  display: none; justify-content: center; align-items: center;
-  z-index: 9999;
-}
-.popup-box {
-  background: white; padding: 30px 25px; border-radius: 15px;
-  text-align: center; max-width: 320px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-  animation: popUp 0.3s ease;
-}
-.popup-icon { font-size: 50px; margin-bottom: 10px; }
-.popup-box h2 { color: #ff6b35; margin: 10px 0; font-size: 22px; }
-.popup-box p { color: #555; font-size: 15px; line-height: 1.5; }
-.popup-doa { font-weight: 600; color: #333 !important; margin: 15px 0 20px; }
-.popup-btn {
-  background: #ff6b35; color: white; border: none;
-  padding: 12px 30px; border-radius: 8px;
-  font-size: 16px; font-weight: bold; cursor: pointer; width: 100%;
-}
-@keyframes popUp {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-  </style>
+.container { max-width: 480px; margin: 0 auto; padding: 16px; position: relative; padding-bottom: 120px; }
+.back-btn { position: absolute; top: 20px; left: 0; font-size: 16px; color: #d2691e; text-decoration: none; font-weight: 600; background: transparent; border: none; }
+header { padding-top:70px; text-align: center; }
+.btn-primary { width: 100%; background: linear-gradient(135deg, #8B0000 0%, #B22222 100%); color: white; padding: 16px; border: none; border-radius: 12px; font-weight: bold; font-size: 16px; cursor: pointer; box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3); }
+.card { background: white; border-radius: 14px; padding: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.menu-img { width: 100%; height: 100px; object-fit: cover; border-radius: 10px; margin-bottom: 8px; }
+.price { color: #8B0000; font-size: 18px; font-weight: bold; margin: 6px 0; }
+.qty-btn { width: 28px; height: 28px; border-radius: 50%; border: none; font-weight: bold; cursor: pointer; }
+.qty-minus { background: #FFE4D6; color: #8B0000; }
+.qty-plus { background: #8B0000; color: white; }
+.tiktok-btn { background: #000; color: white; padding: 16px; border-radius: 12px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.fb-btn { background: #1877F2; color: white; padding: 16px; border-radius: 12px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold; }
+.popup { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; padding: 16px; z-index: 50; }
+.popup-content { background: white; border-radius: 16px; padding: 24px; max-width: 360px; width: 100%; text-align: center; }
+h1, h2, h3 { color: #8B0000; }
+.text-brown { color: #5D4037; }
+.section-title { margin: 20px 0 10px; font-size: 20px; text-align: center; border-bottom: 2px solid #D4AF37; padding-bottom: 5px;}
+.footer-order { position: fixed; bottom: 0; left: 0; width: 100%; background: white; padding: 12px 16px; box-shadow: 0 -2px 10px rgba(0,0,0,0.15); z-index: 99; display: flex; flex-direction: column; gap: 10px; }
+.popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 9999; }
+.popup-box { background: white; padding: 30px 25px; border-radius: 15px; text-align: center; max-width: 320px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+.popup-btn { background: #ff6b35; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; }
+</style>
 </head>
 <body>
-      <div id="page1" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; gap: 16px;">
-  <p class="text-brown" style="font-size: 14px;">Terima kasih sudah klik Link Tautannya</p>
+<div id="page1" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; gap: 16px; padding: 16px;">
+  <p class="text-brown">Terima kasih sudah klik Link Tautannya</p>
   <h1 style="font-size: 32px; color: #1a1a1a;">WELCOME!!!</h1>
-  <h2 style="font-size: 20px;">PIZZA MALAKUE</h2>
-  <p class="text-brown" style="font-size: 14px;">Home Made, Fresh From The Oven + Es Pop Ice</p>
-  
+  <h2>PIZZA MALAKUE</h2>
+  <p class="text-brown">Home Made, Fresh From The Oven + Es Pop Ice</p>
   <p id="statusToko" style="font-size: 12px; font-weight: bold;"></p>
-
-  <button onclick="bukaMenu()" class="btn-primary">
-    🍕 Buat Pesanan Anda Disini
-  </button>
-
-  <a href="https://www.tiktok.com/@malakue_pizza?_r=1&_t=ZS-96bRL9n8WL2" target="_blank" class="tiktok-btn">
-    TikTok
-  </a>
-
-  <a href="https://www.facebook.com/share/18VcLYWzxs/" target="_blank" class="fb-btn">
-    Facebook
-  </a>
+  <button onclick="bukaMenu()" class="btn-primary">🍕 Buat Pesanan Anda Disini</button>
+  <a href="https://www.tiktok.com/@malakue_pizza" target="_blank" class="tiktok-btn">TikTok</a>
+  <a href="https://www.facebook.com/share/18VcLYWzxs/" target="_blank" class="fb-btn">Facebook</a>
 </div>
 
 <div id="page2" style="display:none; flex-direction:column; min-height:100vh;">
-      <header style="text-align:center; padding:16px 0; position:relative;">
-        <button onclick="balikAwal()" class="back-btn">← Kembali</button>
-        <div style="pointer-events:none;">
-          <h1 style="font-size:28px;">Pizza Malakue</h1>
-          <p class="text-brown" style="font-size:14px;">Home Made, Fresh From The Oven</p>
-          <p id="statusToko2" style="font-size:12px; font-weight:bold; margin-top:4px;"></p>
-        </div>
-      </header>
+  <header style="text-align:center; padding:16px 0; position:relative;">
+    <button onclick="balikAwal()" class="back-btn">← Kembali</button>
+    <div>
+      <h1 style="font-size:28px;">Pizza Malakue</h1>
+      <p class="text-brown">Home Made, Fresh From The Oven</p>
+      <p id="statusToko2" style="font-size:12px; font-weight:bold; margin-top:4px;"></p>
+    </div>
+  </header>
 
-      <h2 class="section-title">🍕 Menu Pizza</h2>
-      <div class="grid-2">
-        <div class="card">
-          <img src="pizza-party.jpg" alt="Pizza Party" class="menu-img" loading="lazy">
-          <h3 style="font-size: 14px;">Party</h3>
-          <p class="price">90rb</p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
-            <button onclick="kurang('party')" class="qty-btn qty-minus">-</button>
-            <span id="party" style="font-weight: bold; width: 20px;">0</span>
-            <button onclick="tambah('party')" class="qty-btn qty-plus">+</button>
-          </div>
-        </div>
-        <!-- ... SEMUA MENU PIZZA LAMA BU TETAP DI SINI ... -->
-        <div class="card">
-          <img src="pizza-sosis-kecil.jpg" alt="Pizza Sosis Kecil" class="menu-img" loading="lazy">
-          <h3 style="font-size: 14px;">Sosis Kecil</h3>
-          <p class="price">23rb</p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
-            <button onclick="kurang('sosisKecil')" class="qty-btn qty-minus">-</button>
-            <span id="sosisKecil" style="font-weight: bold; width: 20px;">0</span>
-            <button onclick="tambah('sosisKecil')" class="qty-btn qty-plus">+</button>
-          </div>
-        </div>
+  <h2 class="section-title">🍕 Menu Pizza</h2>
+  <div class="grid-2">
+    <div class="card">
+      <img src="pizza-party.jpg" alt="Pizza Party" class="menu-img">
+      <h3 style="font-size: 14px;">Party</h3>
+      <p class="price">90rb</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <button onclick="kurang('party')" class="qty-btn qty-minus">-</button>
+        <span id="party" style="font-weight: bold; width: 20px;">0</span>
+        <button onclick="tambah('party')" class="qty-btn qty-plus">+</button>
       </div>
-
-      <h2 class="section-title">🥤 Menu Es Pop Ice - 5 Varian</h2>
-      <div class="grid-2">
-        <div class="card">
-          <img src="es-coklat.jpg" alt="Es Coklat" class="menu-img" loading="lazy">
-          <h3 style="font-size: 14px;">Es Coklat</h3>
-          <p class="price">8rb</p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
-            <button onclick="kurang('esCoklat')" class="qty-btn qty-minus">-</button>
-            <span id="esCoklat" style="font-weight: bold; width: 20px;">0</span>
-            <button onclick="tambah('esCoklat')" class="qty-btn qty-plus">+</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="es-taro.jpg" alt="Es Taro" class="menu-img" loading="lazy">
-          <h3 style="font-size: 14px;">Es Taro</h3>
-          <p class="price">8rb</p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
-            <button onclick="kurang('esTaro')" class="qty-btn qty-minus">-</button>
-            <span id="esTaro" style="font-weight: bold; width: 20px;">0</span>
-            <button onclick="tambah('esTaro')" class="qty-btn qty-plus">+</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="es-milo.jpg" alt="Es Milo" class="menu-img" loading="lazy">
-          <h3 style="font-size: 14px;">Es Milo</h3>
-          <p class="price">8rb</p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
-            <button onclick="kurang('esMilo')" class="qty-btn qty-minus">-</button>
-            <span id="esMilo" style="font-weight: bold; width: 20px;">0</span>
-            <button onclick="tambah('esMilo')" class="qty-btn qty-plus">+</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="es-mangga.jpg" alt="Es Mangga" class="menu-img" loading="lazy">
-          <h3 style="font-size: 14px;">Es Mangga</h3>
-          <p class="price">8rb</p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
-            <button onclick="kurang('esMangga')" class="qty-btn qty-minus">-</button>
-            <span id="esMangga" style="font-weight: bold; width: 20px;">0</span>
-            <button onclick="tambah('esMangga')" class="qty-btn qty-plus">+</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="es-alpukat.jpg" alt="Es Alpukat" class="menu-img" loading="lazy">
-          <h3 style="font-size: 14px;">Es Alpukat</h3>
-          <p class="price">10rb</p>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px;">
-            <button onclick="kurang('esAlpukat')" class="qty-btn qty-minus">-</button>
-            <span id="esAlpukat" style="font-weight: bold; width: 20px;">0</span>
-            <button onclick="tambah('esAlpukat')" class="qty-btn qty-plus">+</button>
-          </div>
-        </div>
+    </div>
+    <div class="card">
+      <img src="pizza-sosis-kecil.jpg" alt="Pizza Sosis Kecil" class="menu-img">
+      <h3 style="font-size: 14px;">Sosis Kecil</h3>
+      <p class="price">23rb</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <button onclick="kurang('sosisKecil')" class="qty-btn qty-minus">-</button>
+        <span id="sosisKecil" style="font-weight: bold; width: 20px;">0</span>
+        <button onclick="tambah('sosisKecil')" class="qty-btn qty-plus">+</button>
       </div>
+    </div>
+  </div>
 
-      <div style="text-align:center; padding:30px 20px; margin-top:25px; margin-bottom: 120px;">
-        <h3 style="color:#d9534f;">Info Pemesanan</h3>
-        <p>📱 WhatsApp: <b style="color:#d9534f;">0821-9379-5771</b></p>
-        <p>📍 BTN GRIYA BUMI REZKITA BLOL E/5, UGI BARU, MAPILLI, POLEWALI MANDAR</p>
-        <p>💳 BANK MANDIRI 1700000262752 a.n. KHADIJAH TAHIR</p>
-        <p>⏱️ Estimasi: 10-15 menit</p>
-        <p>📦 Area: Wonomulyo & Sekitarnya</p>
-      </div> <div class="container">
-   <!-- TOMBOL KIRIM & QRIS - CUMA MUNCUL DI MENU -->
-<div class="footer-order" style="display: flex; flex-direction: column; gap: 10px;">
-  <button class="btn-primary" onclick="kirimWA()">
-    🛒 Kirim Pesanan - <span id="totalHarga">Rp 0</span>
-  </button>
-  <button class="btn-primary" onclick="qrisMuncul()" style="background: #D4AF37; color: #3D2B1F;">
-    📱 Bayar Pakai QRIS
-  </button>
-</div>
-</div> 
- 
+  <h2 class="section-title">🥤 Menu Es Pop Ice - 5 Varian</h2>
+  <div class="grid-2">
+    <div class="card">
+      <img src="es-coklat.jpg" alt="Es Coklat" class="menu-img">
+      <h3 style="font-size: 14px;">Es Coklat</h3>
+      <p class="price">8rb</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <button onclick="kurang('esCoklat')" class="qty-btn qty-minus">-</button>
+        <span id="esCoklat" style="font-weight: bold; width: 20px;">0</span>
+        <button onclick="tambah('esCoklat')" class="qty-btn qty-plus">+</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="es-taro.jpg" alt="Es Taro" class="menu-img">
+      <h3 style="font-size: 14px;">Es Taro</h3>
+      <p class="price">8rb</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <button onclick="kurang('esTaro')" class="qty-btn qty-minus">-</button>
+        <span id="esTaro" style="font-weight: bold; width: 20px;">0</span>
+        <button onclick="tambah('esTaro')" class="qty-btn qty-plus">+</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="es-milo.jpg" alt="Es Milo" class="menu-img">
+      <h3 style="font-size: 14px;">Es Milo</h3>
+      <p class="price">8rb</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <button onclick="kurang('esMilo')" class="qty-btn qty-minus">-</button>
+        <span id="esMilo" style="font-weight: bold; width: 20px;">0</span>
+        <button onclick="tambah('esMilo')" class="qty-btn qty-plus">+</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="es-mangga.jpg" alt="Es Mangga" class="menu-img">
+      <h3 style="font-size: 14px;">Es Mangga</h3>
+      <p class="price">8rb</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <button onclick="kurang('esMangga')" class="qty-btn qty-minus">-</button>
+        <span id="esMangga" style="font-weight: bold; width: 20px;">0</span>
+        <button onclick="tambah('esMangga')" class="qty-btn qty-plus">+</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="es-alpukat.jpg" alt="Es Alpukat" class="menu-img">
+      <h3 style="font-size: 14px;">Es Alpukat</h3>
+      <p class="price">10rb</p>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+        <button onclick="kurang('esAlpukat')" class="qty-btn qty-minus">-</button>
+        <span id="esAlpukat" style="font-weight: bold; width: 20px;">0</span>
+        <button onclick="tambah('esAlpukat')" class="qty-btn qty-plus">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; padding:30px 20px; margin-bottom: 120px;">
+    <h3 style="color:#d9534f;">Info Pemesanan</h3>
+    <p>📱 WhatsApp: <b>0821-9379-5771</b></p>
+    <p>📍 BTN GRIYA BUMI REZKITA BLOL E/5, UGI BARU</p>
+  </div>
+
+  <!-- TOMBOL KIRIM & QRIS -->
+  <div class="footer-order">
+    <button class="btn-primary" onclick="kirimWA()">
+      🛒 Kirim Pesanan - <span id="totalHarga">Rp 0</span>
+    </button>
+    <button class="btn-primary" onclick="qrisMuncul()" style="background: #D4AF37; color: #3D2B1F;">
+      📱 Bayar Pakai QRIS
+    </button>
+  </div>
 </div>
 
-<!-- TOMBOL NEMPEL DI BAWAH -->
-
-<div id="popupQris" class="popup" onclick="qrisTutup()" style="display:none;">
+<div id="popupQris" class="popup" onclick="qrisTutup()">
   <div class="popup-content" onclick="event.stopPropagation()">
-    <h3 style="font-size: 20px; margin-bottom: 16px;">SILAHKAN SCAN KODE QRIS DI BAWAH</h3>
-    <img src="qris-pizza-malakue.jpg" alt="QRIS" style="width: 100%; border-radius: 12px; margin-bottom: 16px;">
-    <p style="font-size: 14px; color: #666;">TERIMAH KASIH BANYAK ATAS PEMBELIAN PIZZA TA</p>
-    <button onclick="qrisTutup()" style="margin-top: 16px; width: 100%;" class="btn-secondary">Tutup</button>
+    <h3>SILAHKAN SCAN KODE QRIS DI BAWAH</h3>
+    <img src="qris-pizza-malakue.jpg" alt="QRIS" style="width: 100%; border-radius: 12px; margin: 16px 0;">
+    <button onclick="qrisTutup()" style="margin-top: 16px; width: 100%;" class="btn-primary">Tutup</button>
+  </div>
+</div>
+
+<div id="popupSukses" class="popup-overlay">
+  <div class="popup-box">
+    <div style="font-size: 50px;">🎉</div>
+    <h2>Pesanan Terkirim!</h2>
+    <p>Terima Kasih sudah melakukan pembelian di<br>Pizza Malakue</p>
+    <button class="popup-btn" onclick="tutupPopup()">Aamiin 🙏</button>
   </div>
 </div>
 
@@ -364,149 +175,61 @@ function tambah(item) {
   el.innerText = parseInt(el.innerText) + 1;
   hitungTotal();
 }
-
 function kurang(item) {
   var el = document.getElementById(item);
   var val = parseInt(el.innerText);
-  if(val > 0) {
-    el.innerText = val - 1;
-    hitungTotal();
-  }
+  if(val > 0) { el.innerText = val - 1; hitungTotal(); }
 }
-
 function hitungTotal() {
-  // PIZZA
-  var jmlCoklatMocarella = parseInt(document.getElementById('coklatMocarella').innerText);
-  var jmlCoklatKeju = parseInt(document.getElementById('coklatKeju').innerText);
   var jmlParty = parseInt(document.getElementById('party').innerText);
-  var jmlVulcanoNon = parseInt(document.getElementById('vulcanoNon').innerText);
-  var jmlVulcanoPedas = parseInt(document.getElementById('vulcanoPedas').innerText);
-  var jmlChicken = parseInt(document.getElementById('chicken').innerText);
-  var jmlCorncheese = parseInt(document.getElementById('corncheese').innerText);
-  var jmlBeefSlice = parseInt(document.getElementById('beefSlice').innerText);
-  var jmlBeef = parseInt(document.getElementById('beef').innerText);
-  var jmlMixTopping = parseInt(document.getElementById('mixTopping').innerText);
-  var jmlSosisBratwurst = parseInt(document.getElementById('sosisBratwurst').innerText);
-  var jmlSosisJamur = parseInt(document.getElementById('sosisJamur').innerText);
-  var jmlKejuLovers = parseInt(document.getElementById('kejuLovers').innerText);
-  var jmlSosisBesar = parseInt(document.getElementById('sosisBesar').innerText);
   var jmlSosisKecil = parseInt(document.getElementById('sosisKecil').innerText);
-  // ES
   var jmlEsCoklat = parseInt(document.getElementById('esCoklat').innerText);
   var jmlEsTaro = parseInt(document.getElementById('esTaro').innerText);
   var jmlEsMilo = parseInt(document.getElementById('esMilo').innerText);
   var jmlEsMangga = parseInt(document.getElementById('esMangga').innerText);
   var jmlEsAlpukat = parseInt(document.getElementById('esAlpukat').innerText);
 
-  var subtotal =
-    (jmlCoklatMocarella * 36000) + (jmlCoklatKeju * 31000) + (jmlParty * 90000) + (jmlVulcanoNon * 48000) + (jmlVulcanoPedas * 48000) +
-    (jmlChicken * 30000) + (jmlCorncheese * 29000) + (jmlBeefSlice * 25000) + (jmlBeef * 33000) + (jmlMixTopping * 38000) +
-    (jmlSosisBratwurst * 38000) + (jmlSosisJamur * 29000) + (jmlKejuLovers * 43000) + (jmlSosisBesar * 28000) + (jmlSosisKecil * 23000) +
-    (jmlEsCoklat * 8000) + (jmlEsTaro * 8000) + (jmlEsMilo * 8000) + (jmlEsMangga * 8000) + (jmlEsAlpukat * 10000);
-
-  document.getElementById('total').innerText = 'Rp ' + subtotal.toLocaleString('id-ID');
+  var subtotal = (jmlParty * 90000) + (jmlSosisKecil * 23000) + (jmlEsCoklat * 8000) + (jmlEsTaro * 8000) + (jmlEsMilo * 8000) + (jmlEsMangga * 8000) + (jmlEsAlpukat * 10000);
+  document.getElementById('totalHarga').innerText = 'Rp ' + subtotal.toLocaleString('id-ID'); // SUDAH SAMA
 }
-
 function kirimWA() {
-  // Ambil semua jumlah
-  var jmlCoklatMocarella = parseInt(document.getElementById('coklatMocarella').innerText);
   var jmlParty = parseInt(document.getElementById('party').innerText);
+  var jmlSosisKecil = parseInt(document.getElementById('sosisKecil').innerText);
   var jmlEsCoklat = parseInt(document.getElementById('esCoklat').innerText);
   var jmlEsTaro = parseInt(document.getElementById('esTaro').innerText);
   var jmlEsMilo = parseInt(document.getElementById('esMilo').innerText);
   var jmlEsMangga = parseInt(document.getElementById('esMangga').innerText);
   var jmlEsAlpukat = parseInt(document.getElementById('esAlpukat').innerText);
-  // ...dst ambil semua seperti di hitungTotal
-
-  var totalItem = jmlParty + jmlCoklatMocarella + jmlEsCoklat + jmlEsTaro + jmlEsMilo + jmlEsMangga + jmlEsAlpukat; //dst
-
-  if(totalItem === 0) {
-    alert('PILIH MENU KI DULU!!!');
-    return;
-  }
-
-  var subtotal = 0;
-  var teks = 'Halo Pizza Malakue, saya mau pesan:\n\n*PIZZA:*\n';
-  
+  var totalItem = jmlParty + jmlSosisKecil + jmlEsCoklat + jmlEsTaro + jmlEsMilo + jmlEsMangga + jmlEsAlpukat;
+  if(totalItem === 0) { alert('PILIH MENU KI DULU!!!'); return; }
+  var subtotal = 0; var teks = 'Halo Pizza Malakue, saya mau pesan:\n\n';
   if(jmlParty > 0) { teks += '- Pizza Party x' + jmlParty + ' = Rp ' + (jmlParty*90000).toLocaleString('id-ID') + '\n'; subtotal += jmlParty*90000; }
-  // ...dst semua pizza
-  
-  teks += '\n*ES POP ICE:*\n';
+  if(jmlSosisKecil > 0) { teks += '- Sosis Kecil x' + jmlSosisKecil + ' = Rp ' + (jmlSosisKecil*23000).toLocaleString('id-ID') + '\n'; subtotal += jmlSosisKecil*23000; }
   if(jmlEsCoklat > 0) { teks += '- Es Coklat x' + jmlEsCoklat + ' = Rp ' + (jmlEsCoklat*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsCoklat*8000; }
   if(jmlEsTaro > 0) { teks += '- Es Taro x' + jmlEsTaro + ' = Rp ' + (jmlEsTaro*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsTaro*8000; }
   if(jmlEsMilo > 0) { teks += '- Es Milo x' + jmlEsMilo + ' = Rp ' + (jmlEsMilo*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsMilo*8000; }
   if(jmlEsMangga > 0) { teks += '- Es Mangga x' + jmlEsMangga + ' = Rp ' + (jmlEsMangga*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsMangga*8000; }
   if(jmlEsAlpukat > 0) { teks += '- Es Alpukat x' + jmlEsAlpukat + ' = Rp ' + (jmlEsAlpukat*10000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsAlpukat*10000; }
-
   teks += '\n*Total Bayar: Rp ' + subtotal.toLocaleString('id-ID') + '*';
-
-  var nomorWA = '6282193795771';
-  window.open('https://wa.me/' + nomorWA + '?text=' + encodeURIComponent(teks), '_blank');
+  window.open('https://wa.me/6282193795771?text=' + encodeURIComponent(teks), '_blank');
   tampilkanPopup();
-  // RESET SEMUA MENU KE 0
-  document.querySelectorAll('#page2 span').forEach(el => { if(el.id) el.innerText = '0'; });
+  document.querySelectorAll('#page2 span[id]').forEach(el => { el.innerText = '0'; });
   hitungTotal();
 }
-
-function balikAwal() {
-  document.getElementById('page1').style.display = 'flex';
-  document.getElementById('page2').style.display = 'none';
-  window.scrollTo(0,0);
-}
-
-function bukaMenu() {
-  document.getElementById('page1').style.display = 'none';
-  document.getElementById('page2').style.display = 'flex';
-}
-
-function qrisMuncul() {
-  document.getElementById('popupQris').style.display = 'flex';
-}
-
-function qrisTutup() {
-  document.getElementById('popupQris').style.display = 'none';
-}
-
+function balikAwal() { document.getElementById('page1').style.display = 'flex'; document.getElementById('page2').style.display = 'none'; }
+function bukaMenu() { document.getElementById('page1').style.display = 'none'; document.getElementById('page2').style.display = 'flex'; }
+function qrisMuncul() { document.getElementById('popupQris').style.display = 'flex'; }
+function qrisTutup() { document.getElementById('popupQris').style.display = 'none'; }
 function cekJamBuka() {
-  var sekarang = new Date().getHours();
-  var status = '';
-  if (sekarang >= 10 && sekarang < 21) {
-    status = '🟢 BUKA - 10.00 s/d 21.00 WITA';
-    document.getElementById('statusToko').style.color = '#16a34a';
-    if(document.getElementById('statusToko2')) document.getElementById('statusToko2').style.color = '#16a34a';
-  } else {
-    status = '🔴 TUTUP - Buka jam 10.00 WITA';
-    document.getElementById('statusToko').style.color = '#dc2626';
-    if(document.getElementById('statusToko2')) document.getElementById('statusToko2').style.color = '#dc2626';
-  }
+  var sekarang = new Date().getHours(); var status = '';
+  if (sekarang >= 10 && sekarang < 21) { status = '🟢 BUKA'; document.getElementById('statusToko').style.color = '#16a34a'; }
+  else { status = '🔴 TUTUP'; document.getElementById('statusToko').style.color = '#dc2626'; }
   document.getElementById('statusToko').innerText = status;
   if(document.getElementById('statusToko2')) document.getElementById('statusToko2').innerText = status;
 }
-
-function tampilkanPopup() {
-  document.getElementById('popupSukses').style.display = 'flex';
-}
-
-function tutupPopup() {
-  document.getElementById('popupSukses').style.display = 'none';
-}
-
-hitungTotal();
-cekJamBuka();
+function tampilkanPopup() { document.getElementById('popupSukses').style.display = 'flex'; }
+function tutupPopup() { document.getElementById('popupSukses').style.display = 'none'; }
+hitungTotal(); cekJamBuka();
 </script>
-
-<div id="popupSukses" class="popup-overlay">
-  <div class="popup-box">
-    <div class="popup-icon">🎉</div>
-    <h2>Pesanan Terkirim!</h2>
-    <p>Terima Kasih sudah melakukan pembelian di<br>Pizza Malakue</p>
-    <p class="popup-doa">Sehat Selalu, Murah Rejeki, Panjang Umur</p>
-    <button class="popup-btn" onclick="tutupPopup()">Aamiin 🙏</button>
-  </div>
-</div>
-
 </body>
 </html>
-</script>
-
-<!-- selesai -->
