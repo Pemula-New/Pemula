@@ -3,179 +3,228 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pizza Enak di Wonomulyo Polewali Mandar | Pizza Malakue</title>
-<meta name="title" content="Pizza Enak di Wonomulyo Polewali Mandar">
-<meta name="description" content="Pesan Pizza Home Made enak, Fresh, Murah dan Cepat Saji cuma 23rb-90rb di Wonomulyo Polewali Mandar. Buka Tiap Hari Jam 10.00 - 21.00 WITA. Order via WhatsApp!">
-<link rel="icon" href="logo-pizza.png">
-<meta name="theme-color" content="#8B0000">
-<meta property="og:title" content="Pizza Malakue - Pizza Home Made Fresh From The Oven">
-<meta property="og:description" content="Pesan Pizza Home Made enak, Fresh, Murah dan Cepat Saji cuma 23rb-90rb di Wonomulyo Polewali Mandar. Buka Tiap Hari Jam 10.00 - 21.00 WITA. Order via WhatsApp!">
-
+<title>Pizza Malakue</title>
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(180deg, rgba(255,243,235,0.85) 0%, rgba(255,239,217,0.85) 70%, rgba(245,247,255,0.85) 100%), url('logo-pizza.png') no-repeat center 35% fixed; background-size: 350px auto; color: #3D2B1F; min-height: 100vh; }
-.container { max-width: 480px; margin: 0 auto; padding: 16px; position: relative; padding-bottom: 120px;}
-.back-btn { position: absolute; top: 20px; left: 0; font-size: 16px; color: #d2691e; text-decoration: none; font-weight: 600; background: transparent; border: none; }
-header { padding-top:70px; text-align: center; }
-.btn-primary { width: 100%; background: linear-gradient(135deg, #8B0000 0%, #B22222 100%); color: white; padding: 16px; border: none; border-radius: 12px; font-weight: bold; font-size: 16px; cursor: pointer; box-shadow: 0 4px 12px rgba(139, 0, 0, 0.3); }
-.card { background: white; border-radius: 14px; padding: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.menu-img { width: 100%; height: 100px; object-fit: cover; border-radius: 10px; margin-bottom: 8px; }
-.price { color: #8B0000; font-size: 18px; font-weight: bold; margin: 6px 0; }
-.qty-btn { width: 28px; height: 28px; border-radius: 50%; border: none; font-weight: bold; cursor: pointer; }
-.qty-minus { background: #FFE4D6; color: #8B0000; }
-.qty-plus { background: #8B0000; color: white; }
-.tiktok-btn { background: #000; color: white; padding: 16px; border-radius: 12px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; }
-.fb-btn { background: #1877F2; color: white; padding: 16px; border-radius: 12px; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold; }
-.popup { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; padding: 16px; z-index: 50; }
-.popup-content { background: white; border-radius: 16px; padding: 24px; max-width: 360px; width: 100%; text-align: center; }
-h1, h2, h3 { color: #8B0000; }
-.text-brown { color: #5D4037; }
-.section-title { margin: 20px 0 10px; font-size: 20px; text-align: center; border-bottom: 2px solid #D4AF37; padding-bottom: 5px;}
-.footer-order { position: fixed; bottom: 0; left: 0; width: 100%; background: white; padding: 12px 16px; box-shadow: 0 -2px 10px rgba(0,0,0,0.15); z-index: 99; display: flex; flex-direction: column; gap: 10px; }
-.popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 9999; }
-.popup-box { background: white; padding: 30px 25px; border-radius: 15px; text-align: center; max-width: 320px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
-.popup-btn { background: #ff6b35; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; }
+  body { font-family: Arial, sans-serif; margin:0; background:#FFF7F0; }
+  header { background: linear-gradient(135deg, #8B0000, #FF4500); color:white; padding:20px; text-align:center; }
+  header h1 { margin:5px 0; font-size:24px; }
+  header p { margin:3px 0; font-size:13px; }
+  
+ .container { padding:15px; padding-bottom: 220px; }
+  h3 { color:#8B0000; border-bottom:2px solid #D4AF37; padding-bottom:5px; }
+  
+ .card { background:white; border-radius:12px; padding:10px; margin:10px 0; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+ .card img { width:100%; border-radius:10px; }
+ .card h4 { margin:8px 0 4px; color:#8B0000; }
+ .card p { margin:3px 0; font-size:13px; color:#444; }
+ .card b { color:#000; }
+  
+ .qty { display:flex; align-items:center; gap:8px; margin-top:6px; }
+ .qty button { background:#8B0000; color:white; border:none; padding:5px 10px; border-radius:6px; cursor:pointer; }
+ .qty input { width:40px; text-align:center; border:1px solid #ccc; border-radius:6px; }
+  
+ .footer-order { position:fixed; bottom:0; left:0; right:0; background:white; padding:15px; box-shadow:0 -2px 8px rgba(0,0,0,0.15); z-index:100; }
+ .footer-order h4 { margin:0 0 8px; color:#8B0000; }
+ .rincian { font-size:13px; margin-bottom:8px; max-height:80px; overflow-y:auto; }
+ .total { font-size:16px; font-weight:bold; color:#8B0000; margin-bottom:10px; }
+ .btn-wa { background:#25D366; color:white; border:none; padding:12px; width:100%; border-radius:8px; font-size:16px; font-weight:bold; cursor:pointer; }
+ .btn-qris { background:#D4AF37; color:white; border:none; padding:12px; width:100%; border-radius:8px; font-size:16px; font-weight:bold; cursor:pointer; margin-top:8px; }
+  
+  /* POPUP */
+ .popup-overlay { display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.6); z-index:999; align-items:center; justify-content:center; }
+ .popup-box { background:white; padding:25px; border-radius:15px; text-align:center; max-width:320px; box-shadow:0 5px 15px rgba(0,0,0,0.3); }
+ .popup-box h2 { color:#8B0000; }
+ .popup-btn { background:#8B0000; color:white; border:none; padding:10px 20px; border-radius:8px; margin-top:15px; cursor:pointer; }
+  
+  footer { text-align:center; padding:30px 20px; margin-bottom: 180px; color:#777; font-size:12px; }
 </style>
 </head>
 <body>
-<div id="page1" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; gap: 16px; padding: 16px;">
-  <p class="text-brown">Terima kasih sudah klik Link Tautannya</p>
-  <h1 style="font-size: 32px; color: #1a1a1a;">WELCOME !!!</h1>
-  <h2>PIZZA MALAKUE</h2>
-  <p class="text-brown">Home Made, Fresh From The Oven</p>
-  <p id="statusToko" style="font-size: 12px; font-weight: bold;"></p>
-  <button onclick="bukaMenu()" class="btn-primary">🍕 Menu & Buat Pesanan Anda Disini</button>
-  <a href="https://www.tiktok.com/@malakue_pizza" target="_blank" class="tiktok-btn">TikTok</a>
-  <a href="https://www.facebook.com/share/18VcLYWzxs/" target="_blank" class="fb-btn">Facebook</a>
-</div>
 
-<div id="page2" style="display:none; flex-direction:column; min-height:100vh;">
-  <header style="text-align:center; padding:16px 0; position:relative;">
-    <button onclick="balikAwal()" class="back-btn">← Kembali</button>
-    <div><h1 style="font-size:28px;">Pizza Malakue</h1><p class="text-brown">Home Made, Fresh From The Oven</p><p id="statusToko2" style="font-size:12px; font-weight:bold; margin-top:4px;"></p></div>
-  </header>
+<header>
+  <h1>WELCOME!!!</h1>
+  <h1 style="font-size:18px;">PIZZA MALAKUE</h1>
+  <p>Home Made, Fresh From The Oven</p>
+  <p id="statusToko2" style="font-size:13px; font-weight:bold; margin-top:6px; padding:6px 14px; border-radius:20px; display:inline-block;"></p>
+</header>
 
-  <h2 class="section-title">🍕 Menu Pizza</h2>
-  <div class="grid-2">
-    <div class="card"><img src="pizza-party.jpg" class="menu-img"><h3 style="font-size: 14px;">Party</h3><p class="price">90rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('party')" class="qty-btn qty-minus">-</button><span id="party">0</span><button onclick="tambah('party')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-vulcano-non-pedas.jpg" class="menu-img"><h3 style="font-size: 14px;">Vulcano Non Pedas</h3><p class="price">48rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('vulcanoNon')" class="qty-btn qty-minus">-</button><span id="vulcanoNon">0</span><button onclick="tambah('vulcanoNon')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-vulcano-pedas.jpg" class="menu-img"><h3 style="font-size: 14px;">Vulcano Pedas</h3><p class="price">48rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('vulcanoPedas')" class="qty-btn qty-minus">-</button><span id="vulcanoPedas">0</span><button onclick="tambah('vulcanoPedas')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-keju-lovers.jpg" class="menu-img"><h3 style="font-size: 14px;">Keju Lovers</h3><p class="price">43rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('kejuLovers')" class="qty-btn qty-minus">-</button><span id="kejuLovers">0</span><button onclick="tambah('kejuLovers')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-mix-toping.jpg" class="menu-img"><h3 style="font-size: 14px;">Mix Topping</h3><p class="price">38rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('mixTopping')" class="qty-btn qty-minus">-</button><span id="mixTopping">0</span><button onclick="tambah('mixTopping')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-sosis-bratwurst.jpg" class="menu-img"><h3 style="font-size: 14px;">Sosis Bratwurst</h3><p class="price">38rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('sosisBratwurst')" class="qty-btn qty-minus">-</button><span id="sosisBratwurst">0</span><button onclick="tambah('sosisBratwurst')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-coklat-mozarella.jpg" class="menu-img"><h3 style="font-size: 14px;">Coklat Mozarella</h3><p class="price">36rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('coklatMocarella')" class="qty-btn qty-minus">-</button><span id="coklatMocarella">0</span><button onclick="tambah('coklatMocarella')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-beef.jpg" class="menu-img"><h3 style="font-size: 14px;">Beef</h3><p class="price">33rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('beef')" class="qty-btn qty-minus">-</button><span id="beef">0</span><button onclick="tambah('beef')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-coklat-keju-cedar.jpg" class="menu-img"><h3 style="font-size: 14px;">Coklat Keju Cedar</h3><p class="price">31rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('coklatKeju')" class="qty-btn qty-minus">-</button><span id="coklatKeju">0</span><button onclick="tambah('coklatKeju')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-chicken.jpg" class="menu-img"><h3 style="font-size: 14px;">Chicken</h3><p class="price">30rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('chicken')" class="qty-btn qty-minus">-</button><span id="chicken">0</span><button onclick="tambah('chicken')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-corncheese.jpg" class="menu-img"><h3 style="font-size: 14px;">Corn Cheese</h3><p class="price">29rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('corncheese')" class="qty-btn qty-minus">-</button><span id="corncheese">0</span><button onclick="tambah('corncheese')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-sosis-jamur.jpg" class="menu-img"><h3 style="font-size: 14px;">Sosis Jamur</h3><p class="price">29rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('sosisJamur')" class="qty-btn qty-minus">-</button><span id="sosisJamur">0</span><button onclick="tambah('sosisJamur')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-sosis-besar.jpg" class="menu-img"><h3 style="font-size: 14px;">Sosis Besar</h3><p class="price">28rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('sosisBesar')" class="qty-btn qty-minus">-</button><span id="sosisBesar">0</span><button onclick="tambah('sosisBesar')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-beef-slice.jpg" class="menu-img"><h3 style="font-size: 14px;">Beef Slice</h3><p class="price">25rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('beefSlice')" class="qty-btn qty-minus">-</button><span id="beefSlice">0</span><button onclick="tambah('beefSlice')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="pizza-sosis-kecil.jpg" class="menu-img"><h3 style="font-size: 14px;">Sosis Kecil</h3><p class="price">23rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('sosisKecil')" class="qty-btn qty-minus">-</button><span id="sosisKecil">0</span><button onclick="tambah('sosisKecil')" class="qty-btn qty-plus">+</button></div></div>
-  </div>
+<div class="container">
+  <h3>🍕 MENU PIZZA</h3>
+  <div id="menuPizza"></div>
 
-  <h2 class="section-title">🥤 Menu Es Pop Ice - 5 Varian</h2>
-  <div class="grid-2">
-    <div class="card"><img src="es-coklat.jpg" class="menu-img"><h3 style="font-size: 14px;">Es Coklat</h3><p class="price">8rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('esCoklat')" class="qty-btn qty-minus">-</button><span id="esCoklat">0</span><button onclick="tambah('esCoklat')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="es-taro.jpg" class="menu-img"><h3 style="font-size: 14px;">Es Taro</h3><p class="price">8rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('esTaro')" class="qty-btn qty-minus">-</button><span id="esTaro">0</span><button onclick="tambah('esTaro')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="es-milo.jpg" class="menu-img"><h3 style="font-size: 14px;">Es Milo</h3><p class="price">8rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('esMilo')" class="qty-btn qty-minus">-</button><span id="esMilo">0</span><button onclick="tambah('esMilo')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="es-mangga.jpg" class="menu-img"><h3 style="font-size: 14px;">Es Mangga</h3><p class="price">8rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('esMangga')" class="qty-btn qty-minus">-</button><span id="esMangga">0</span><button onclick="tambah('esMangga')" class="qty-btn qty-plus">+</button></div></div>
-    <div class="card"><img src="es-alpukat.jpg" class="menu-img"><h3 style="font-size: 14px;">Es Alpukat</h3><p class="price">10rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('esAlpukat')" class="qty-btn qty-minus">-</button><span id="esAlpukat">0</span><button onclick="tambah('esAlpukat')" class="qty-btn qty-plus">+</button></div></div>
-  </div>
-
-<div style="text-align:center; padding:30px 20px; margin-bottom: 250px;">
-    <h3 style="color:#d9534f;">INFO PEMESANAN</h3>
-    <p>📱 WhatsApp: <b>0821-9379-5771</b></p>
-    <p>📍 BTN GRIYA BUMI REZKITA BLOL E/5, UGI BARU</p>
-    <p>💳 BANK MANDIRI 1700000262752 a.n. KHADIJAH TAHIR</p>
-    <p>⏱️ Estimasi: 10-15 menit</p>
-    <p>📦 Area: Wonomulyo & Sekitarnya</p>
-    
-    <div style="display:flex; gap:10px; justify-content:center; margin-top:15px;">
-        <a href="tel:082193795771" style="padding:10px 20px; background:#007bff; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">📞 Telepon</a>
-        <a href="https://maps.app.goo.gl/UqLyJSTVuCpCWUB28" target="_blank" style="padding:10px 20px; background:#555; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">📍 Lokasi</a>
-    </div>
-    
-    <p style="margin-top:20px; font-size:12px; color:#888;">© 2025 Pizza Malakue</p>
+  <h3>🥤 MENU MINUMAN</h3>
+  <div id="menuMinuman"></div>
 </div>
 
 <div class="footer-order">
-    <div style="background: #FFF7F0; border-radius: 10px; padding: 10px; margin-bottom: 8px; font-size: 13px;">
-      <div style="display: flex; justify-content: space-between;"><span>🍕 Pizza:</span><span><span id="jmlPizza">0</span> item - <span id="totalPizza">Rp 0</span></span></div>
-      <div style="display: flex; justify-content: space-between; margin-top: 4px;"><span>🥤 Es Pop Ice:</span><span><span id="jmlEs">0</span> item - <span id="totalEs">Rp 0</span></span></div>
-      <hr style="margin: 6px 0; border: none; border-top: 1px dashed #D4AF37;">
-      <div style="display: flex; justify-content: space-between; font-weight: bold; color: #8B0000;"><span>TOTAL:</span><span id="totalHarga">Rp 0</span></div>
-    </div>
-    <button class="btn-primary" onclick="kirimWA()">🛒 Kirim Pesanan</button>
-    <button class="btn-primary" onclick="qrisMuncul()" style="background: #D4AF37; color: #3D2B1F;">📱 Bayar Pakai QRIS</button>
-</div>
+  <h4>Rincian Pesanan</h4>
+  <div id="rincian" class="rincian">Belum ada pesanan</div>
+  <div id="total" class="total">Total: Rp 0</div>
+  <input type="text" id="catatan" placeholder="Catatan: Alamat lengkap / Tanpa pedas" style="width:100%; padding:10px; border:1px solid #D4AF37; border-radius:8px; font-size:14px; margin-bottom:10px;">
+  <button class="btn-wa" onclick="kirimWA()">📲 Kirim Pesanan via WA</button>
+  <button class="btn-qris" onclick="showQRIS()">💳 Bayar dengan QRIS</button>
 </div>
 
-<div id="popupQris" class="popup" onclick="qrisTutup()"><div class="popup-content" onclick="event.stopPropagation()"><h3>SILAHKAN SCAN KODE QRIS DI BAWAH</h3><img src="qris-pizza-malakue.jpg" style="width: 100%; border-radius: 12px; margin: 16px 0;"><button onclick="qrisTutup()" class="btn-primary">Tutup</button></div></div>
+<!-- POPUP SUKSES -->
 <div id="popupSukses" class="popup-overlay">
   <div class="popup-box">
     <div style="font-size: 50px;">🎉</div>
     <h2 style="color: #8B0000;">Pesanan Terkirim!</h2>
     <p>Terima Kasih sudah melakukan<br>Pembelian di</p>
-    <p style="font-size: 18px; font-weight: bold; color: #000000; margin: 8px 0;">PIZZA MALAKUE</p>
+    <p style="font-size: 18px; font-weight: bold; color: #000; margin: 8px 0;">*Pizza Malakue*</p>
     <p style="line-height: 1.6;">Semoga Selalu Diberikan Kesehatan Sekeluarga dari ALLAH Yang Maha Kuasa, DiLancarkan Rezekinya Selalu & Dipermudah Segala Urusanya</p>
     <button class="popup-btn" onclick="tutupPopup()">Aamiin 🙏</button>
   </div>
 </div>
 
+<!-- POPUP QRIS -->
+<div id="popupQRIS" class="popup-overlay">
+  <div class="popup-box">
+    <h2 style="color: #8B0000;">Scan QRIS</h2>
+    <img src="qris-kamu.jpg" alt="QRIS" style="width:200px; border-radius:10px;">
+    <p>Silahkan Scan untuk Pembayaran</p>
+    <button class="popup-btn" onclick="tutupQRIS()">Tutup</button>
+  </div>
+</div>
+
+<footer>
+  © 2025 Pizza Malakue
+</footer>
+
 <script>
-function tambah(item) { document.getElementById(item).innerText = parseInt(document.getElementById(item).innerText) + 1; hitungTotal(); }
-function kurang(item) { var el = document.getElementById(item); if(parseInt(el.innerText) > 0) { el.innerText = parseInt(el.innerText) - 1; hitungTotal(); } }
-function hitungTotal() {
-  var p = ['party','vulcanoNon','vulcanoPedas','kejuLovers','mixTopping','sosisBratwurst','coklatMocarella','beef','coklatKeju','chicken','corncheese','sosisJamur','sosisBesar','beefSlice','sosisKecil'].map(id=>parseInt(document.getElementById(id).innerText));
-  var e = ['esCoklat','esTaro','esMilo','esMangga','esAlpukat'].map(id=>parseInt(document.getElementById(id).innerText));
-  var hargaP = [90000,48000,48000,43000,38000,38000,36000,33000,31000,30000,29000,29000,28000,25000,23000];
-  var hargaE = [8000,8000,8000,8000,10000];
-  var totalPizza = p.reduce((a,b,i)=>a+b*hargaP[i],0); var jmlPizza = p.reduce((a,b)=>a+b,0);
-  var totalEs = e.reduce((a,b,i)=>a+b*hargaE[i],0); var jmlEs = e.reduce((a,b)=>a+b,0);
-  document.getElementById('jmlPizza').innerText = jmlPizza; document.getElementById('totalPizza').innerText = 'Rp ' + totalPizza.toLocaleString('id-ID');
-  document.getElementById('jmlEs').innerText = jmlEs; document.getElementById('totalEs').innerText = 'Rp ' + totalEs.toLocaleString('id-ID');
-  document.getElementById('totalHarga').innerText = 'Rp ' + (totalPizza+totalEs).toLocaleString('id-ID');
+const menuPizza = [
+  {nama:"Pizza Party", harga:45000, img:"pizza-party.jpg"},
+  {nama:"Pizza Keju Lovers", harga:40000, img:"pizza-keju.jpg"},
+  {nama:"Pizza Vulcano Pedas", harga:42000, img:"pizza-vulcano.jpg"},
+  {nama:"Pizza Sosis", harga:38000, img:"pizza-sosis.jpg"}
+];
+
+const menuMinuman = [
+  {nama:"Es Pop Ice Coklat", harga:8000, img:"popice-coklat.jpg"},
+  {nama:"Es Pop Ice Stroberi", harga:8000, img:"popice-stroberi.jpg"},
+  {nama:"Es Teh Manis", harga:5000, img:"esteh.jpg"}
+];
+
+let keranjang = [];
+
+function renderMenu() {
+  let htmlPizza = "";
+  menuPizza.forEach((m,i)=>{
+    htmlPizza += `
+    <div class="card">
+      <img src="${m.img}" class="menu-img">
+      <h4>${m.nama}</h4>
+      <p><b>Rp ${m.harga.toLocaleString()}</b></p>
+      <div class="qty">
+        <button onclick="kurang(${i},'pizza')">-</button>
+        <input type="text" id="qty-pizza-${i}" value="0" readonly>
+        <button onclick="tambah(${i},'pizza')">+</button>
+      </div>
+    </div>`;
+  });
+  document.getElementById("menuPizza").innerHTML = htmlPizza;
+
+  let htmlMinum = "";
+  menuMinuman.forEach((m,i)=>{
+    htmlMinum += `
+    <div class="card">
+      <img src="${m.img}" class="menu-img">
+      <h4>${m.nama}</h4>
+      <p><b>Rp ${m.harga.toLocaleString()}</b></p>
+      <div class="qty">
+        <button onclick="kurang(${i},'minum')">-</button>
+        <input type="text" id="qty-minum-${i}" value="0" readonly>
+        <button onclick="tambah(${i},'minum')">+</button>
+      </div>
+    </div>`;
+  });
+  document.getElementById("menuMinuman").innerHTML = htmlMinum;
 }
-function kirimWA() {
-  var ids = ['party','vulcanoNon','vulcanoPedas','kejuLovers','mixTopping','sosisBratwurst','coklatMocarella','beef','coklatKeju','chicken','corncheese','sosisJamur','sosisBesar','beefSlice','sosisKecil','esCoklat','esTaro','esMilo','esMangga','esAlpukat'];
-  var nama = ['Pizza Party','Vulcano Non Pedas','Vulcano Pedas','Keju Lovers','Mix Topping','Sosis Bratwurst','Coklat Mozarella','Beef','Coklat Keju Cedar','Chicken','Corn Cheese','Sosis Jamur','Sosis Besar','Beef Slice','Sosis Kecil','Es Coklat','Es Taro','Es Milo','Es Mangga','Es Alpukat'];
-  var harga = [90000,48000,48000,43000,38000,38000,36000,33000,31000,30000,29000,29000,28000,25000,23000,8000,8000,8000,8000,10000];
-  var jml = ids.map(id=>parseInt(document.getElementById(id).innerText));
-  if(jml.reduce((a,b)=>a+b,0)===0){alert('PILIH MENU KI DULU!!!');return;}
-  var teksPizza='',teksEs='',subtotal=0;
-  jml.forEach((v,i)=>{if(v>0){var line=`• ${nama[i]} x${v} = Rp ${(v*harga[i]).toLocaleString('id-ID')}\n`; subtotal+=v*harga[i]; if(i<15)teksPizza+=line; else teksEs+=line;}});
-  var teks='*Halo Pizza Malakue, saya mau pesan:*\n\n'+teksPizza; if(teksEs!='')teks+='\n*Halo ES Malakue, saya mau pesan:*\n'+teksEs; teks+=`\n*Total Bayar: Rp ${subtotal.toLocaleString('id-ID')}*`;
-  window.open('https://wa.me/6282193795771?text='+encodeURIComponent(teks),'_blank'); tampilkanPopup(); ids.forEach(id=>document.getElementById(id).innerText='0'); hitungTotal();
+
+function tambah(i, jenis) {
+  let menu = jenis=='pizza'? menuPizza : menuMinuman;
+  let id = `qty-${jenis}-${i}`;
+  let qty = parseInt(document.getElementById(id).value)+1;
+  document.getElementById(id).value = qty;
+  updateKeranjang(menu[i].nama, menu[i].harga, qty);
 }
-function balikAwal(){document.getElementById('page1').style.display='flex';document.getElementById('page2').style.display='none';}
-function bukaMenu(){document.getElementById('page1').style.display='none';document.getElementById('page2').style.display='flex';}
-function qrisMuncul(){document.getElementById('popupQris').style.display='flex';}
-function qrisTutup(){document.getElementById('popupQris').style.display='none';}
-function cekJamBuka() {
-  var sekarang = new Date().getHours();
-  var status = '';
-  
-  if (sekarang >= 10 && sekarang < 21) {
-    status = '🟢 BUKA - 10.00 s/d 21.00 WITA';
-    document.getElementById('statusToko').style.color = '#16a34a';
-    if(document.getElementById('statusToko2')) 
-      document.getElementById('statusToko2').style.color = '#16a34a';
-  } else {
-    status = '🔴 TUTUP - Buka jam 10.00 WITA';
-    document.getElementById('statusToko').style.color = '#dc2626';
-    if(document.getElementById('statusToko2')) 
-      document.getElementById('statusToko2').style.color = '#dc2626';
+
+function kurang(i, jenis) {
+  let menu = jenis=='pizza'? menuPizza : menuMinuman;
+  let id = `qty-${jenis}-${i}`;
+  let qty = parseInt(document.getElementById(id).value);
+  if(qty>0) qty--;
+  document.getElementById(id).value = qty;
+  updateKeranjang(menu[i].nama, menu[i].harga, qty);
+}
+
+function updateKeranjang(nama, harga, qty) {
+  let index = keranjang.findIndex(x=>x.nama==nama);
+  if(index>-1){
+    if(qty==0) keranjang.splice(index,1);
+    else keranjang[index].qty = qty;
+  } else if(qty>0){
+    keranjang.push({nama,harga,qty});
   }
-  
-  document.getElementById('statusToko').innerText = status;
-  if(document.getElementById('statusToko2')) 
-    document.getElementById('statusToko2').innerText = status;
+  renderRincian();
 }
-function tampilkanPopup(){document.getElementById('popupSukses').style.display='flex';}
-function tutupPopup(){document.getElementById('popupSukses').style.display='none';}
-hitungTotal();cekJamBuka();
+
+function renderRincian() {
+  let html = "";
+  let total = 0;
+  keranjang.forEach(x=>{
+    html += `${x.nama} x${x.qty} = Rp ${(x.harga*x.qty).toLocaleString()}<br>`;
+    total += x.harga*x.qty;
+  });
+  document.getElementById("rincian").innerHTML = html || "Belum ada pesanan";
+  document.getElementById("total").innerText = "Total: Rp " + total.toLocaleString();
+}
+
+function kirimWA() {
+  if(keranjang.length==0) return alert("Pilih menu dulu bu");
+  let pesan = "Assalamualaikum Pizza Malakue%0A";
+  pesan += "Saya mau pesan:%0A";
+  keranjang.forEach(x=>{
+    pesan += `- ${x.nama} x${x.qty}%0A`;
+  });
+  let total = keranjang.reduce((a,b)=>a+b.harga*b.qty,0);
+  pesan += `Total: Rp ${total.toLocaleString()}%0A`;
+  let catatan = document.getElementById("catatan").value;
+  if(catatan) pesan += `Catatan: ${catatan}%0A`;
+  window.open(`https://wa.me/628xxxxxxx?text=${pesan}`);
+  document.getElementById("popupSukses").style.display="flex";
+}
+
+function showQRIS(){ document.getElementById("popupQRIS").style.display="flex"; }
+function tutupQRIS(){ document.getElementById("popupQRIS").style.display="none"; }
+function tutupPopup(){ document.getElementById("popupSukses").style.display="none"; }
+
+// CEK JAM OPERASIONAL
+function cekJamOperasional() {
+    const now = new Date();
+    const jam = now.getHours();
+    const menit = now.getMinutes();
+    const waktuSekarang = jam + menit / 60;
+
+    const buka = 10; // Jam 10:00
+    const tutup = 21; // Jam 21:00
+
+    const statusEl = document.getElementById("statusToko2");
+    
+    if (waktuSekarang >= buka && waktuSekarang < tutup) {
+        statusEl.innerText = "🟢 BUKA - 10.00 s/d 21.00 WITA";
+        statusEl.style.background = "#D4EDDA"; // Hijau muda
+        statusEl.style.color = "#155724"; // Hijau tua
+    } else {
+        statusEl.innerText = "🔴 TUTUP - Buka jam 10.00";
+        statusEl.style.background = "#F8D7DA"; // Merah muda
+        statusEl.style.color = "#721C24"; // Merah tua
+    }
+}
+cekJamOperasional();
+
+renderMenu();
 </script>
+
 </body>
 </html>
