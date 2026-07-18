@@ -36,6 +36,16 @@ h1, h2, h3 { color: #8B0000; }
 .popup-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); display: none; justify-content: center; align-items: center; z-index: 9999; }
 .popup-box { background: white; padding: 30px 25px; border-radius: 15px; text-align: center; max-width: 320px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
 .popup-btn { background: #ff6b35; color: white; border: none; padding: 12px 30px; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; width: 100%; }
+
+/* ANIMASI KEDIP UNTUK STATUS BUKA */
+@keyframes kedip {
+ 0% { opacity: 1; }
+ 50% { opacity: 0.4; }
+ 100% { opacity: 1; }
+}
+.kedip-buka {
+  animation: kedip 1.2s infinite;
+}
 </style>
 </head>
 <body>
@@ -91,12 +101,12 @@ h1, h2, h3 { color: #8B0000; }
     <p>💳 BANK MANDIRI 1700000262752 a.n. KHADIJAH TAHIR</p>
     <p>⏱️ Estimasi: 10-15 menit</p>
     <p>📦 Area: Wonomulyo & Sekitarnya</p>
-    
+
     <div style="display:flex; gap:10px; justify-content:center; margin-top:15px;">
         <a href="tel:082193795771" style="padding:10px 20px; background:#007bff; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">📞 Telepon</a>
         <a href="https://maps.app.goo.gl/UqLyJSTVuCpCWUB28" target="_blank" style="padding:10px 20px; background:#555; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">📍 Lokasi</a>
     </div>
-    
+
     <p style="margin-top:20px; font-size:12px; color:#888;">© 2025 Pizza Malakue</p>
 </div>
 
@@ -118,7 +128,7 @@ h1, h2, h3 { color: #8B0000; }
     <div style="font-size: 50px;">🎉</div>
     <h2 style="color: #8B0000;">Pesanan Terkirim!</h2>
     <p>Terima Kasih sudah melakukan<br>Pembelian di</p>
-    <p style="font-size: 18px; font-weight: bold; color: #000000; margin: 8px 0;">PIZZA MALAKUE</p>
+    <p style="font-size: 18px; font-weight: bold; color: #000; margin: 8px 0;">PIZZA MALAKUE</p>
     <p style="line-height: 1.6;">Semoga Selalu Diberikan Kesehatan Sekeluarga dari ALLAH Yang Maha Kuasa, DiLancarkan Rezekinya Selalu & Dipermudah Segala Urusanya</p>
     <button class="popup-btn" onclick="tutupPopup()">Aamiin 🙏</button>
   </div>
@@ -153,35 +163,42 @@ function balikAwal(){document.getElementById('page1').style.display='flex';docum
 function bukaMenu(){document.getElementById('page1').style.display='none';document.getElementById('page2').style.display='flex';}
 function qrisMuncul(){document.getElementById('popupQris').style.display='flex';}
 function qrisTutup(){document.getElementById('popupQris').style.display='none';}
-// CEK JAM OPERASIONAL - BADGE
+function tampilkanPopup(){document.getElementById('popupSukses').style.display='flex';}
+function tutupPopup(){document.getElementById('popupSukses').style.display='none';}
+
+// CEK JAM OPERASIONAL - BADGE + ANIMASI
 function cekJamOperasional() {
     const now = new Date();
     const jam = now.getHours();
     const menit = now.getMinutes();
     const waktuSekarang = jam + menit / 60;
 
-    const buka = 10;   // Jam 10:00
+    const buka = 10; // Jam 10:00
     const tutup = 21; // Jam 21:00
 
     const statusEl1 = document.getElementById("statusToko");
     const statusEl2 = document.getElementById("statusToko2");
-    
+
     if (waktuSekarang >= buka && waktuSekarang < tutup) {
         statusEl1.innerText = "🟢 BUKA - 10.00 s/d 21.00 WITA";
         statusEl1.style.background = "#D4EDDA";
         statusEl1.style.color = "#155724";
-        
+        statusEl1.classList.add("kedip-buka");
+
         statusEl2.innerText = "🟢 BUKA - 10.00 s/d 21.00 WITA";
         statusEl2.style.background = "#D4EDDA";
         statusEl2.style.color = "#155724";
+        statusEl2.classList.add("kedip-buka");
     } else {
         statusEl1.innerText = "🔴 TUTUP - Buka jam 10.00";
         statusEl1.style.background = "#F8D7DA";
         statusEl1.style.color = "#721C24";
-        
+        statusEl1.classList.remove("kedip-buka");
+
         statusEl2.innerText = "🔴 TUTUP - Buka jam 10.00";
         statusEl2.style.background = "#F8D7DA";
         statusEl2.style.color = "#721C24";
+        statusEl2.classList.remove("kedip-buka");
     }
 }
 cekJamOperasional();
