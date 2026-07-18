@@ -153,7 +153,38 @@ function balikAwal(){document.getElementById('page1').style.display='flex';docum
 function bukaMenu(){document.getElementById('page1').style.display='none';document.getElementById('page2').style.display='flex';}
 function qrisMuncul(){document.getElementById('popupQris').style.display='flex';}
 function qrisTutup(){document.getElementById('popupQris').style.display='none';}
+// CEK JAM OPERASIONAL - BADGE
+function cekJamOperasional() {
+    const now = new Date();
+    const jam = now.getHours();
+    const menit = now.getMinutes();
+    const waktuSekarang = jam + menit / 60;
 
+    const buka = 10;   // Jam 10:00
+    const tutup = 21; // Jam 21:00
+
+    const statusEl1 = document.getElementById("statusToko");
+    const statusEl2 = document.getElementById("statusToko2");
+    
+    if (waktuSekarang >= buka && waktuSekarang < tutup) {
+        statusEl1.innerText = "🟢 BUKA - 10.00 s/d 21.00 WITA";
+        statusEl1.style.background = "#D4EDDA";
+        statusEl1.style.color = "#155724";
+        
+        statusEl2.innerText = "🟢 BUKA - 10.00 s/d 21.00 WITA";
+        statusEl2.style.background = "#D4EDDA";
+        statusEl2.style.color = "#155724";
+    } else {
+        statusEl1.innerText = "🔴 TUTUP - Buka jam 10.00";
+        statusEl1.style.background = "#F8D7DA";
+        statusEl1.style.color = "#721C24";
+        
+        statusEl2.innerText = "🔴 TUTUP - Buka jam 10.00";
+        statusEl2.style.background = "#F8D7DA";
+        statusEl2.style.color = "#721C24";
+    }
+}
+cekJamOperasional();
 </script>
 </body>
 </html>
