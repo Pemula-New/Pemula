@@ -141,11 +141,29 @@ h1, h2, h3 { color: #8B0000; }
     <p>📍 BTN GRIYA BUMI REZKITA BLOL E/5, UGI BARU</p>
   </div>
 
-  <!-- TOMBOL KIRIM & QRIS -->
-  <div class="footer-order">
-    <button class="btn-primary" onclick="kirimWA()">
-      🛒 Kirim Pesanan - <span id="totalHarga">Rp 0</span>
-    </button>
+     <!-- TOMBOL KIRIM & QRIS DENGAN RINCIAN -->
+    <div class="footer-order">
+      <div style="background: #FFF7F0; border-radius: 10px; padding: 10px; margin-bottom: 8px; font-size: 13px;">
+        <div style="display: flex; justify-content: space-between;">
+          <span>🍕 Pizza:</span>
+          <span><span id="jmlPizza">0</span> item - <span id="totalPizza">Rp 0</span></span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 4px;">
+          <span>🥤 Es Pop Ice:</span>
+          <span><span id="jmlEs">0</span> item - <span id="totalEs">Rp 0</span></span>
+        </div>
+        <hr style="margin: 6px 0; border: none; border-top: 1px dashed #D4AF37;">
+        </div>
+  </div>
+</div>
+         
+      <button class="btn-primary" onclick="kirimWA()">
+        🛒 Kirim Pesanan
+      </button>
+      <button class="btn-primary" onclick="qrisMuncul()" style="background: #D4AF37; color: #3D2B1F;">
+        📱 Bayar Pakai QRIS
+      </button>
+    </div>
     <button class="btn-primary" onclick="qrisMuncul()" style="background: #D4AF37; color: #3D2B1F;">
       📱 Bayar Pakai QRIS
     </button>
@@ -181,16 +199,36 @@ function kurang(item) {
   if(val > 0) { el.innerText = val - 1; hitungTotal(); }
 }
 function hitungTotal() {
+  // PIZZA
   var jmlParty = parseInt(document.getElementById('party').innerText);
   var jmlSosisKecil = parseInt(document.getElementById('sosisKecil').innerText);
+
+  // ES
   var jmlEsCoklat = parseInt(document.getElementById('esCoklat').innerText);
   var jmlEsTaro = parseInt(document.getElementById('esTaro').innerText);
   var jmlEsMilo = parseInt(document.getElementById('esMilo').innerText);
   var jmlEsMangga = parseInt(document.getElementById('esMangga').innerText);
   var jmlEsAlpukat = parseInt(document.getElementById('esAlpukat').innerText);
 
-  var subtotal = (jmlParty * 90000) + (jmlSosisKecil * 23000) + (jmlEsCoklat * 8000) + (jmlEsTaro * 8000) + (jmlEsMilo * 8000) + (jmlEsMangga * 8000) + (jmlEsAlpukat * 10000);
-  document.getElementById('totalHarga').innerText = 'Rp ' + subtotal.toLocaleString('id-ID'); // SUDAH SAMA
+  // HITUNG PIZZA
+  var totalPizza = (jmlParty * 90000) + (jmlSosisKecil * 23000);
+  var jmlItemPizza = jmlParty + jmlSosisKecil;
+
+  // HITUNG ES
+  var totalEs = (jmlEsCoklat * 8000) + (jmlEsTaro * 8000) + (jmlEsMilo * 8000) + (jmlEsMangga * 8000) + (jmlEsAlpukat * 10000);
+  var jmlItemEs = jmlEsCoklat + jmlEsTaro + jmlEsMilo + jmlEsMangga + jmlEsAlpukat;
+
+  // TOTAL SEMUA
+  var subtotal = totalPizza + totalEs;
+
+  // TAMPILKAN KE LAYAR
+  document.getElementById('jmlPizza').innerText = jmlItemPizza;
+  document.getElementById('totalPizza').innerText = 'Rp ' + totalPizza.toLocaleString('id-ID');
+  
+  document.getElementById('jmlEs').innerText = jmlItemEs;
+  document.getElementById('totalEs').innerText = 'Rp ' + totalEs.toLocaleString('id-ID');
+  
+  document.getElementById('totalHarga').innerText = 'Rp ' + subtotal.toLocaleString('id-ID');
 }
 function kirimWA() {
   var jmlParty = parseInt(document.getElementById('party').innerText);
