@@ -43,9 +43,9 @@ h1, h2, h3 { color: #8B0000; }
   <p class="text-brown">Terima kasih sudah klik Link Tautannya</p>
   <h1 style="font-size: 32px; color: #1a1a1a;">WELCOME!!!</h1>
   <h2>PIZZA MALAKUE</h2>
-  <p class="text-brown">Home Made, Fresh From The Oven + Es Pop Ice</p>
+  <p class="text-brown">Home Made, Fresh From The Oven</p>
   <p id="statusToko" style="font-size: 12px; font-weight: bold;"></p>
-  <button onclick="bukaMenu()" class="btn-primary">🍕 Buat Pesanan Anda Disini</button>
+  <button onclick="bukaMenu()" class="btn-primary">🍕 Menu & Buat Pesanan Anda Disini</button>
   <a href="https://www.tiktok.com/@malakue_pizza" target="_blank" class="tiktok-btn">TikTok</a>
   <a href="https://www.facebook.com/share/18VcLYWzxs/" target="_blank" class="fb-btn">Facebook</a>
 </div>
@@ -84,12 +84,19 @@ h1, h2, h3 { color: #8B0000; }
     <div class="card"><img src="es-alpukat.jpg" class="menu-img"><h3 style="font-size: 14px;">Es Alpukat</h3><p class="price">10rb</p><div style="display: flex; align-items: center; justify-content: center; gap: 8px;"><button onclick="kurang('esAlpukat')" class="qty-btn qty-minus">-</button><span id="esAlpukat">0</span><button onclick="tambah('esAlpukat')" class="qty-btn qty-plus">+</button></div></div>
   </div>
 
-  <div style="text-align:center; padding:30px 20px; margin-bottom: 120px;">
-    <h3 style="color:#d9534f;">Info Pemesanan</h3>
-    <p>📱 WhatsApp: <b>0821-9379-5771</b></p>
-    <p>📍 BTN GRIYA BUMI REZKITA BLOL E/5, UGI BARU</p>
-    <p>💳 BANK MANDIRI 1700000262752 a.n. KHADIJAH TAHIR</p>
+<div style="text-align:center; padding:30px 20px; margin-top:25px;">
+  <h3 style="color:#d9534f;">Info Pemesanan</h3>
+  <p>📱 WhatsApp: <b style="color:#d9534f;">0821-9379-5771</b></p>
+  <p>📍 BTN GRIYA BUMI REZKITA BLOL E/5, UGI BARU, MAPILLI, POLEWALI MANDAR</p>
+  <p>💳 BANK MANDIRI 1700000262752 a.n. KHADIJAH TAHIR</p>
+  <p>⏱️ Estimasi: 10-15 menit</p>
+  <p>📦 Area: Wonomulyo & Sekitarnya</p>
+  <div style="display:flex; gap:10px; justify-content:center; margin-top:15px;">
+    <a href="tel:082193795771" style="padding:10px 20px; background:#007bff; color:white; border-radius:8px; text-decoration:none;">📞 Telepon</a>
+    <a href="https://maps.app.goo.gl/UqLyJSTVuCpCWUB28" target="_blank" style="padding:10px 20px; background:#555; color:white; border-radius:8px; text-decoration:none;">📍 Lokasi</a>
   </div>
+  <p style="margin-top:20px; font-size:12px; color:#888;">© 2025 Pizza Malakue</p>
+</div>
 
   <div class="footer-order">
     <div style="background: #FFF7F0; border-radius: 10px; padding: 10px; font-size: 13px;">
@@ -135,7 +142,26 @@ function balikAwal(){document.getElementById('page1').style.display='flex';docum
 function bukaMenu(){document.getElementById('page1').style.display='none';document.getElementById('page2').style.display='flex';}
 function qrisMuncul(){document.getElementById('popupQris').style.display='flex';}
 function qrisTutup(){document.getElementById('popupQris').style.display='none';}
-function cekJamBuka(){var j=new Date().getHours();var s=j>=10&&j<21?'🟢 BUKA':'🔴 TUTUP';document.getElementById('statusToko').innerText=s;document.getElementById('statusToko2').innerText=s;document.getElementById('statusToko').style.color=j>=10&&j<21?'#16a34a':'#dc2626';}
+function cekJamBuka() {
+  var sekarang = new Date().getHours();
+  var status = '';
+  
+  if (sekarang >= 10 && sekarang < 21) {
+    status = '🟢 BUKA - 10.00 s/d 21.00 WITA';
+    document.getElementById('statusToko').style.color = '#16a34a';
+    if(document.getElementById('statusToko2')) 
+      document.getElementById('statusToko2').style.color = '#16a34a';
+  } else {
+    status = '🔴 TUTUP - Buka jam 10.00 WITA';
+    document.getElementById('statusToko').style.color = '#dc2626';
+    if(document.getElementById('statusToko2')) 
+      document.getElementById('statusToko2').style.color = '#dc2626';
+  }
+  
+  document.getElementById('statusToko').innerText = status;
+  if(document.getElementById('statusToko2')) 
+    document.getElementById('statusToko2').innerText = status;
+}
 function tampilkanPopup(){document.getElementById('popupSukses').style.display='flex';}
 function tutupPopup(){document.getElementById('popupSukses').style.display='none';}
 hitungTotal();cekJamBuka();
