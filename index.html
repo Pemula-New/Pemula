@@ -216,9 +216,7 @@ header {
   </style>
 </head>
 <body>
-  <div class="container">
-
-    <div id="page1" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; gap: 16px;">
+      <div id="page1" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; text-align: center; gap: 16px;">
   <p class="text-brown" style="font-size: 14px;">Terima kasih sudah klik Link Tautannya</p>
   <h1 style="font-size: 32px; color: #1a1a1a;">WELCOME!!!</h1>
   <h2 style="font-size: 20px;">PIZZA MALAKUE</h2>
@@ -336,18 +334,20 @@ header {
         <p>⏱️ Estimasi: 10-15 menit</p>
         <p>📦 Area: Wonomulyo & Sekitarnya</p>
       </div>
+  <div class="container">
+    <!-- TOMBOL KIRIM & QRIS - CUMA MUNCUL DI MENU -->
+    <div class="footer-order">
+      <button class="btn-primary" onclick="kirimWA()" style="margin-bottom: 10px;">
+        🛒 Kirim Pesanan - <span id="total">Rp 0</span>
+      </button>
+      <button class="btn-secondary" onclick="qrisMuncul()">
+        📱 Bayar Pakai QRIS
+      </button>
+    </div>
 </div> 
 </div>
 
 <!-- TOMBOL NEMPEL DI BAWAH -->
-<div class="footer-order">
-  <button onclick="kirimWA()" class="btn-primary">
-    🛒 Kirim Pesanan - <span id="total">Rp 0</span>
-  </button>
-  <button onclick="qrisMuncul()" class="btn-secondary" style="width: 100%; margin-top: 8px;">
-    📱 Bayar Pakai QRIS
-  </button>
-</div>
 
 <div id="popupQris" class="popup" onclick="qrisTutup()" style="display:none;">
   <div class="popup-content" onclick="event.stopPropagation()">
