@@ -237,17 +237,33 @@ function kirimWA() {
   var jmlEsMilo = parseInt(document.getElementById('esMilo').innerText);
   var jmlEsMangga = parseInt(document.getElementById('esMangga').innerText);
   var jmlEsAlpukat = parseInt(document.getElementById('esAlpukat').innerText);
+
   var totalItem = jmlParty + jmlSosisKecil + jmlEsCoklat + jmlEsTaro + jmlEsMilo + jmlEsMangga + jmlEsAlpukat;
   if(totalItem === 0) { alert('PILIH MENU KI DULU!!!'); return; }
-  var subtotal = 0; var teks = 'Halo Pizza Malakue, saya mau pesan:\n\n';
-  if(jmlParty > 0) { teks += '- Pizza Party x' + jmlParty + ' = Rp ' + (jmlParty*90000).toLocaleString('id-ID') + '\n'; subtotal += jmlParty*90000; }
-  if(jmlSosisKecil > 0) { teks += '- Sosis Kecil x' + jmlSosisKecil + ' = Rp ' + (jmlSosisKecil*23000).toLocaleString('id-ID') + '\n'; subtotal += jmlSosisKecil*23000; }
-  if(jmlEsCoklat > 0) { teks += '- Es Coklat x' + jmlEsCoklat + ' = Rp ' + (jmlEsCoklat*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsCoklat*8000; }
-  if(jmlEsTaro > 0) { teks += '- Es Taro x' + jmlEsTaro + ' = Rp ' + (jmlEsTaro*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsTaro*8000; }
-  if(jmlEsMilo > 0) { teks += '- Es Milo x' + jmlEsMilo + ' = Rp ' + (jmlEsMilo*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsMilo*8000; }
-  if(jmlEsMangga > 0) { teks += '- Es Mangga x' + jmlEsMangga + ' = Rp ' + (jmlEsMangga*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsMangga*8000; }
-  if(jmlEsAlpukat > 0) { teks += '- Es Alpukat x' + jmlEsAlpukat + ' = Rp ' + (jmlEsAlpukat*10000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsAlpukat*10000; }
+
+  var subtotal = 0;
+  var teksPizza = '';
+  var teksEs = '';
+
+  // HITUNG PIZZA
+  if(jmlParty > 0) { teksPizza += '• Pizza Party x' + jmlParty + ' = Rp ' + (jmlParty*90000).toLocaleString('id-ID') + '\n'; subtotal += jmlParty*90000; }
+  if(jmlSosisKecil > 0) { teksPizza += '• Sosis Kecil x' + jmlSosisKecil + ' = Rp ' + (jmlSosisKecil*23000).toLocaleString('id-ID') + '\n'; subtotal += jmlSosisKecil*23000; }
+
+  // HITUNG ES
+  if(jmlEsCoklat > 0) { teksEs += '• Es Coklat x' + jmlEsCoklat + ' = Rp ' + (jmlEsCoklat*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsCoklat*8000; }
+  if(jmlEsTaro > 0) { teksEs += '• Es Taro x' + jmlEsTaro + ' = Rp ' + (jmlEsTaro*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsTaro*8000; }
+  if(jmlEsMilo > 0) { teksEs += '• Es Milo x' + jmlEsMilo + ' = Rp ' + (jmlEsMilo*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsMilo*8000; }
+  if(jmlEsMangga > 0) { teksEs += '• Es Mangga x' + jmlEsMangga + ' = Rp ' + (jmlEsMangga*8000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsMangga*8000; }
+  if(jmlEsAlpukat > 0) { teksEs += '• Es Alpukat x' + jmlEsAlpukat + ' = Rp ' + (jmlEsAlpukat*10000).toLocaleString('id-ID') + '\n'; subtotal += jmlEsAlpukat*10000; }
+
+  // GABUNGKAN PESAN
+  var teks = 'Halo Pizza Malakue, saya mau pesan:\n';
+  if(teksPizza!= '') teks += '\n' + teksPizza;
+
+  if(teksEs!= '') teks += '\nHalo ES Malakue, saya mau pesan:\n' + teksEs;
+
   teks += '\n*Total Bayar: Rp ' + subtotal.toLocaleString('id-ID') + '*';
+
   window.open('https://wa.me/6282193795771?text=' + encodeURIComponent(teks), '_blank');
   tampilkanPopup();
   document.querySelectorAll('#page2 span[id]').forEach(el => { el.innerText = '0'; });
