@@ -334,15 +334,15 @@ header {
         <p>⏱️ Estimasi: 10-15 menit</p>
         <p>📦 Area: Wonomulyo & Sekitarnya</p>
       </div> <div class="container">
-    <!-- TOMBOL KIRIM & QRIS - CUMA MUNCUL DI MENU -->
-    <div class="footer-order">
-      <button class="btn-primary" onclick="kirimWA()" style="margin-bottom: 10px;">
-        🛒 Kirim Pesanan - <span id="total">Rp 0</span>
-      </button>
-      <button class="btn-secondary" onclick="qrisMuncul()">
-        📱 Bayar Pakai QRIS
-      </button>
-    </div>
+   <!-- TOMBOL KIRIM & QRIS - CUMA MUNCUL DI MENU -->
+<div class="footer-order" style="display: flex; flex-direction: column; gap: 10px;">
+  <button class="btn-primary" onclick="kirimWA()">
+    🛒 Kirim Pesanan - <span id="totalHarga">Rp 0</span>
+  </button>
+  <button class="btn-primary" onclick="qrisMuncul()" style="background: #D4AF37; color: #3D2B1F;">
+    📱 Bayar Pakai QRIS
+  </button>
+</div>
 </div> 
  
 </div>
